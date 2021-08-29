@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-<title>first app</title>
+<title>Example image</title>
+    <link rel="stylesheet" href="{%  static 'css/mystyle.css' %}"/>
 </head>
 <body>
 
-<h1>My First App</h1>
-<p>Welcome to my first app</p>
-{{insert_me}}
+<h1>this is automation building system example</h1>
+<h1>this is automation building system example</h1>
+<img src="{% static 'images/image.jpg' %}" alt="uh oh, didn't show!">
 </body>
 </html>

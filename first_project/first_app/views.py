@@ -7,3 +7,7 @@ from django.http import HttpResponse
 def index(request):
     my_dict = {"insert_me": "hello world"}
     return render(request, "first_app/index.html", context=my_dict)
+
+def help(request):
+    my_dict = {"help_me": "help page"}
+    return render(request, "first_app/help.html", context=my_dict)
