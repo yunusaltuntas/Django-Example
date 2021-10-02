@@ -5,4 +5,6 @@ from first_app import views
 urlpatterns = [
     url(r'^$', views.index, name="index"),
     url(r'^help', views.help, name="help"),
+    url(r'^user', views.user, name="user"),
+    url(r'^form', views.form_name_view, name="form")
 ]

@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-<head>
-<title>Example image</title>
-    <link rel="stylesheet" href="{%  static 'css/mystyle.css' %}"/>
-</head>
-<body>
+   <head>
+      <title>Example image</title>
+      <link rel="stylesheet" href="{%  static 'css/mystyle.css' %}"/>
+   </head>
+   <body>
+      <h1>this is automation building system example</h1>
+      <div class="djangtwo">
+         {% if access_records %}
+         <table >
+            <thead>
+               <th>Site Name</th>
+               <th>Date Accessed</th>
+            </thead>
+            {% for acc in access_records %}
+            <tr>
+               <td>{{acc.name}}</td>
+               <td>{{acc.date}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+         {%else%}
+         <p>NO ACCESS RECORDS FOUND!</p>
+         {%endif%}
+      </div>
 
-<h1>this is automation building system example</h1>
-<h1>this is automation building system example</h1>
-<img src="{% static 'images/image.jpg' %}" alt="uh oh, didn't show!">
-</body>
 </html>
